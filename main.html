@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NN Project</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.js"></script>
+    <script type="text/javascript" src="color.js"></script>
+    <style>
+        .holder {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        .box {
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            font-size: 30px;
+            text-align: center;
+            border-style: solid;
+            border-color: #ddd;
+        }
+    </style>
+</head>
+
+<body onload="scrambleColor();">
+    <h1>NN Project</h1>
+    <div class="holder">
+        <div id="left" class="box"></div>
+        <div id="right" class="box"></div>
+    </div>
+    <button onclick="onInput();">
+        ｖｖｖ The color matches this well ｖｖｖ
+    </button>
+    <div class="holder">
+        <input class="box" id="slider" type = "range" min="0.1" max="1.0" step="0.1" oninput="textbox.value = slider.value * 10">
+        <input class="box" id="textbox" type = "text" disabled="disabled" value = 6>
+    </div>
+    <button onclick ="train(); console.log('TRAINING...');">TRAIN</button>
+</body>
